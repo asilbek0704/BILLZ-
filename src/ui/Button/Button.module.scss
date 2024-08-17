@@ -1,0 +1,43 @@
+.main {
+  padding: 28px 32px;
+  border-radius: 32px;
+  background: #0065ff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+}
+
+.extra {
+  padding: 16px;
+  border-radius: 16px;
+  background: #f1f3f5;
+  color: #0065FF;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #DBEAFE;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 32px;
+  }
+}
+
+
+.main, .extra {
+  transition: .25s linear;
+}

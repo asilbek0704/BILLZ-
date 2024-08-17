@@ -1,0 +1,10 @@
+.flag {
+  width: 22px;
+  height: 20px;
+  overflow: hidden;
+
+  @media (max-width: 576px) {
+    width: 18px;
+    height: 14px;
+  }
+}

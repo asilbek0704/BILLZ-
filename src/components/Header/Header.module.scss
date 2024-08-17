@@ -1,0 +1,61 @@
+.header {
+  padding-block: 16px 48px;
+
+  @media (max-width: 576px) {
+    padding-block: 0 48px;
+  }
+}
+
+.navigation {
+  padding: 16px 0;
+  @media (max-width: 576px) {
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 64px 0px #00000014;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.link {
+  font-weight: 700;
+  padding: 16px;
+  transition: 0.5s;
+  border-radius: 16px;
+
+  &:hover {
+    color: #0065ff;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+}
+
+.partnershipBtn {
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
