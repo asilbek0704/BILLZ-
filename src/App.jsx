@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'normalize.css';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
+import { Advantages } from './views/Advantages/Advantages';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,9 @@ const router = createBrowserRouter([
     element: (
       <>
         <Header />
-        <main style={{height: "70vh"}}></main>
+        <main>
+          <Advantages />
+        </main>
         <Footer />
       </>
     ),
