@@ -95,6 +95,10 @@ input:is(:focus, :active) {
   }
 }
 
+.no-container {
+  max-width: 100% !important;
+}
+
 // main {
 //   padding-top: 8px;
 //   padding-bottom: 72px;

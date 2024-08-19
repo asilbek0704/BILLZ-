@@ -26,9 +26,9 @@ export const Button = ({ children, variation, className, tag, to }) => {
           {children}
         </button>
       ) : (
-        <button className={classNames(buttonClass, className)}>
+        <Link to={to} className={classNames(buttonClass, className)}>
           {children}
-        </button>
+        </Link>
       )}
     </>
   );

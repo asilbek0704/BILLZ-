@@ -40,12 +40,12 @@ export const Header = () => {
           </ul>
 
           <div className={s.buttonGroup}>
-            <Button variation='extra' className={s.langBtn}>
+            <Button variation='extra' tag={"button"} className={s.langBtn}>
               <Flag />
               RU
             </Button>
 
-            <Button variation='extra' className={s.partnershipBtn}>
+            <Button variation='extra' to="/1" className={s.partnershipBtn}>
               Стать партнером
             </Button>
 

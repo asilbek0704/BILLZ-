@@ -1,0 +1,91 @@
+.achievement {
+  margin-bottom: 96px;
+
+  @media (max-width: 576px) {
+    margin-bottom: 48px;
+  }
+}
+
+.achievementContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @media (max-width: 768px) {
+    gap: 48px;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  * {
+    text-align: center;
+  }
+}
+
+.number {
+  color: #cbd5e1;
+  font-style: italic;
+  font-size: 64px;
+  letter-spacing: -2.5px;
+
+  @media (max-width: 576px) {
+    font-size: 32px;
+    letter-spacing: -1.3px;
+  }
+}
+
+.title {
+  color: #000;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -1.9px;
+  margin-block: 16px 32px;
+
+  @media (max-width: 576px) {
+    font-size: 28px;
+    letter-spacing: -1.1px;
+    margin-block: 12px 24px;
+
+    max-width: 330px;
+    width: 100%;
+  }
+
+  br {
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}
+
+.descr {
+  color: #475569;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    max-width: 330px;
+  }
+
+  br {
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}
+
+.button {
+  width: fit-content;
+  margin: 0 auto;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+}

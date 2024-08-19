@@ -1,0 +1,19 @@
+.ticker {
+  padding-block: 128px 96px;
+
+  @media (max-width: 576px) {
+    padding-block: 76px 48px;
+  }
+}
+
+.item {
+  color: #000;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -1.9px;
+
+  @media (max-width: 576px) {
+    font-size: 28px;
+    letter-spacing: -1.1px;
+  }
+}

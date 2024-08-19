@@ -3,6 +3,9 @@ import 'normalize.css';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Advantages } from './views/Advantages/Advantages';
+import { Automation } from './views/Automation/Automation';
+import { ChoiceTicker } from './views/ChoiceTicker/ChoiceTicker';
+import { Reason } from './views/Reason/Reason';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +15,9 @@ const router = createBrowserRouter([
         <Header />
         <main>
           <Advantages />
+          <Automation />
+          <ChoiceTicker />
+          <Reason />
         </main>
         <Footer />
       </>

@@ -32,7 +32,7 @@ export const Footer = () => (
 
     <div className={s.application}>
       <Container>
-        <Button variation={'main'} tag={'Link'} to={'/1'}>
+        <Button tag={'Link'} to={'/1'}>
           Оставить заявку
         </Button>
       </Container>

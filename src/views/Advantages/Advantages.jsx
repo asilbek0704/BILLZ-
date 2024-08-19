@@ -126,7 +126,7 @@ export const Advantages = () => {
           </li>
         </ul>
 
-        <Button className={s.button} tag='Link' to='/'>
+        <Button className={s.button} to='/'>
           Оставить заявку на консультацию
         </Button>
       </Container>

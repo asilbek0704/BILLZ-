@@ -1,0 +1,42 @@
+.achievement {
+  overflow: hidden;
+}
+
+.achievement:nth-child(even) {
+  padding-block: 76px;
+  border-radius: 128px;
+  background: #eff6ff;
+
+  @media (max-width: 576px) {
+    border-radius: 64px;
+    padding-block: 48px;
+  }
+}
+
+.requests {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  @media (max-width: 576px) {
+    translate: -24%;
+  }
+
+  img {
+    width: auto;
+    height: 296px;
+
+    @media (max-width: 576px) {
+      height: 160px;
+    }
+  }
+}
+
+.authors img {
+  object-fit: contain;
+
+  @media (max-width: 576px) {
+    max-width: auto;
+    max-height: 32px;
+  }
+}
