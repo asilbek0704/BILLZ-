@@ -24,10 +24,14 @@ html {
 
 body {
   color: #475569;
-  background: #ffffff;
+  background: linear-gradient(to bottom, #0065ff, #ffffff);
   font-family: Gilroy;
   font-weight: 600;
   font-size: 18px;
+}
+
+#root {
+  background: #ffffff;
 }
 
 img,
