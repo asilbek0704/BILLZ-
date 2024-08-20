@@ -1,4 +1,5 @@
 import { Container } from '../../components/Container/Container';
+import { scrollToForm } from '../../helpers/scrollToForm';
 import { Button } from '../../ui/Button/Button';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './Advantages.module.scss';
@@ -126,7 +127,11 @@ export const Advantages = () => {
           </li>
         </ul>
 
-        <Button className={s.button} to='/'>
+        <Button
+          className={s.button}
+          to='#partnership-form'
+          onClick={scrollToForm}
+        >
           Оставить заявку на консультацию
         </Button>
       </Container>

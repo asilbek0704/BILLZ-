@@ -1,0 +1,141 @@
+.privelege {
+  padding-block: 96px;
+  border-radius: 128px;
+  background: #f1f3f5;
+  margin-bottom: 128px;
+
+  @media (max-width: 576px) {
+    padding-block: 48px;
+    border-radius: 64px;
+    margin-bottom: 76px;
+  }
+}
+
+.privelegeContainer {
+  display: grid;
+  grid-template-columns: 600px 360px;
+  grid-template-areas:
+    'title button'
+    'items image';
+  gap: 64px;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'title' 'items' 'image';
+    gap: 0;
+  }
+}
+
+.title {
+  grid-area: title;
+  color: #000;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -1.9px;
+
+  @media (max-width: 576px) {
+    font-size: 28px;
+    letter-spacing: -1.1px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.button {
+  grid-area: button;
+  width: fit-content;
+  justify-self: flex-end;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.list {
+  grid-area: items;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  @media (max-width: 576px) {
+    gap: 8px;
+    margin-block: 40px 16px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 16px;
+  border-radius: 32px;
+  background: #fff;
+
+  @media (max-width: 576px) {
+    padding: 24px 8px;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+
+    @media (max-width: 576px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  p {
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.8px;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+      letter-spacing: -0.5px;
+      max-width: 145px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.picture {
+  grid-area: image;
+
+  @media (max-width: 576px) {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  img {
+    width: 100%;
+    height: auto;
+
+    &:last-child {
+      display: none;
+    }
+
+    @media (max-width: 576px) {
+      &:first-child {
+        display: none;
+      }
+      
+      &:last-child {
+        display: block;
+        height: 296px;
+        width: auto;
+      }
+    }
+  }
+}

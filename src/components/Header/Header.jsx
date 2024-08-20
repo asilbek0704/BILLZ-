@@ -7,6 +7,7 @@ import { Menu } from '../../ui/Menu/Menu';
 
 import s from './Header.module.scss';
 import { useState } from 'react';
+import { scrollToForm } from '../../helpers/scrollToForm';
 
 export const Header = () => {
   const [isShown, setIsShown] = useState(false);
@@ -40,12 +41,17 @@ export const Header = () => {
           </ul>
 
           <div className={s.buttonGroup}>
-            <Button variation='extra' tag={"button"} className={s.langBtn}>
+            <Button variation='extra' tag={'button'} className={s.langBtn}>
               <Flag />
               RU
             </Button>
 
-            <Button variation='extra' to="/1" className={s.partnershipBtn}>
+            <Button
+              variation='extra'
+              to='#partnership-form'
+              onClick={scrollToForm}
+              className={s.partnershipBtn}
+            >
               Стать партнером
             </Button>
 

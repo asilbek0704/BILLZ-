@@ -2,11 +2,24 @@ import classNames from 'classnames';
 import { Button } from '../../ui/Button/Button';
 import { Container } from '../Container/Container';
 import s from './Achievement.module.scss';
+import { scrollToForm } from '../../helpers/scrollToForm';
 
-export const Achievement = ({ number, title, descr, children, className, noContainer }) => {
+export const Achievement = ({
+  number,
+  title,
+  descr,
+  children,
+  className,
+  noContainer,
+}) => {
   return (
     <div className={classNames(s.achievement, className)}>
-      <Container className={classNames(s.achievementContainer, noContainer ? "no-container" : '')}>
+      <Container
+        className={classNames(
+          s.achievementContainer,
+          noContainer ? 'no-container' : ''
+        )}
+      >
         <div className={s.about}>
           <span className={s.number}>{number}</span>
           <h2 className={s.title}>{title}</h2>
@@ -15,7 +28,13 @@ export const Achievement = ({ number, title, descr, children, className, noConta
 
         {children}
 
-        <Button className={s.button} to='/1'>Оставить заявку на консультацию</Button>
+        <Button
+          className={s.button}
+          to='#partnership-form'
+          onClick={scrollToForm}
+        >
+          Оставить заявку на консультацию
+        </Button>
       </Container>
     </div>
   );

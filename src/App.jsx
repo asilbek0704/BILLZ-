@@ -6,6 +6,9 @@ import { Advantages } from './views/Advantages/Advantages';
 import { Automation } from './views/Automation/Automation';
 import { ChoiceTicker } from './views/ChoiceTicker/ChoiceTicker';
 import { Reason } from './views/Reason/Reason';
+import { Privelege } from './views/Privelege/Privelege';
+import { Partnership } from './views/Partnership/Partnership';
+import { PartnershipForm } from './views/PartnershipForm/PartnershipForm';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,9 @@ const router = createBrowserRouter([
           <Automation />
           <ChoiceTicker />
           <Reason />
+          <Privelege />
+          <Partnership />
+          <PartnershipForm />
         </main>
         <Footer />
       </>
