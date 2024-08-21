@@ -1,7 +1,6 @@
 import { Container } from '../Container/Container';
 import { Logo } from '../Logo/Logo';
 import s from './Footer.module.scss';
-import { Button } from '../../ui/Button/Button';
 
 export const Footer = () => (
   <>
@@ -29,13 +28,5 @@ export const Footer = () => (
         </figure>
       </Container>
     </footer>
-
-    <div className={s.application}>
-      <Container>
-        <Button tag={'Link'} to={'/1'}>
-          Оставить заявку
-        </Button>
-      </Container>
-    </div>
   </>
 );

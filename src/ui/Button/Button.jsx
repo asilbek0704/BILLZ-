@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import s from './Button.module.scss';
 import { Link } from 'react-router-dom';
 
-export const Button = ({ children, variation, className, tag, to, onClick }) => {
+export const Button = ({ children, variation, className, tag, to, onClick, formId }) => {
   let buttonClass;
   switch (variation) {
     case 'main':
@@ -22,7 +22,7 @@ export const Button = ({ children, variation, className, tag, to, onClick }) => 
           {children}
         </Link>
       ) : tag === 'button' ? (
-        <button onClick={onClick} className={classNames(buttonClass, className)}>
+        <button onClick={onClick} className={classNames(buttonClass, className)} form={formId}>
           {children}
         </button>
       ) : (

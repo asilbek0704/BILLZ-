@@ -3,8 +3,15 @@ import { Container } from '../../components/Container/Container';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './PartnershipForm.module.scss';
 import { Button } from '../../ui/Button/Button';
+import { useLocation } from 'react-router-dom';
 
-export const PartnershipForm = () => {
+const PartnershipForm = () => {
+  const { pathname } = useLocation();
+
+  if (window.innerWidth < 576 && pathname == '/') {
+    return;
+  }
+
   return (
     <Container className={s.formContainer}>
       <form id='partnership-form' className={s.form}>
@@ -12,7 +19,8 @@ export const PartnershipForm = () => {
           Оставьте заявку на партнерство <br />и наши эксперты проведут
           <br />
           &nbsp;
-          <br /><Highlighter>бесплатную консультацию</Highlighter>
+          <br />
+          <Highlighter>бесплатную консультацию</Highlighter>
         </h1>
 
         <fieldset className={s.inputs}>
@@ -160,3 +168,5 @@ export const PartnershipForm = () => {
     </Container>
   );
 };
+
+export default PartnershipForm;
