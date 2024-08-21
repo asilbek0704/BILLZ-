@@ -1,20 +1,50 @@
 import { Input, InputAdornment } from '@mui/material';
 import { Container } from '../../components/Container/Container';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
-import s from './PartnershipForm.module.scss';
 import { Button } from '../../ui/Button/Button';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import s from './PartnershipForm.module.scss';
 
 const PartnershipForm = () => {
+  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   if (window.innerWidth < 576 && pathname == '/') {
     return;
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const {
+      fullname,
+      phone,
+      reason,
+      hasBusiness,
+      experience,
+      investmentAmount,
+      payload,
+      city,
+    } = e.target;
+
+    const formData = {
+      fullname: fullname.value,
+      phone: phone.value,
+      reason: reason.value,
+      hasBusiness: hasBusiness.value,
+      experience: experience.value,
+      investmentAmount: investmentAmount.value,
+      payload: payload.value,
+      city: city.value,
+    };
+
+    console.log(formData);
+    navigate("/application/sent");
+  }
+
   return (
     <Container className={s.formContainer}>
-      <form id='partnership-form' className={s.form}>
+      <form id='partnership-form' className={s.form} onSubmit={handleSubmit}>
         <h1 className={s.title}>
           Оставьте заявку на партнерство <br />и наши эксперты проведут
           <br />

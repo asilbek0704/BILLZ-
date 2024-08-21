@@ -8,8 +8,9 @@ import { Menu } from '../../ui/Menu/Menu';
 import s from './Header.module.scss';
 import { useState } from 'react';
 import { scrollToForm } from '../../helpers/scrollToForm';
+import classNames from 'classnames';
 
-export const Header = () => {
+export const Header = ({ className }) => {
   const [isShown, setIsShown] = useState(false);
 
   function handleClick() {
@@ -17,7 +18,7 @@ export const Header = () => {
   }
 
   return (
-    <header className={s.header}>
+    <header className={classNames(s.header, className)}>
       <nav className={s.navigation}>
         <Container className={s.headerContainer}>
           <Logo />

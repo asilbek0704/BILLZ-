@@ -12,6 +12,7 @@ import { Partnership } from './views/Partnership/Partnership';
 import { lazy, Suspense } from 'react';
 import { ApplicationButton } from './components/ApplicationButton/ApplicationButton';
 import { ReturnButton } from './components/ReturnButton/ReturnButton';
+import { ApplicationSent } from './views/ApplicationSent/ApplicationSent';
 const PartnershipForm = lazy(() =>
   import('./views/PartnershipForm/PartnershipForm')
 );
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <main>
-          <ReturnButton to="/" />
+          <ReturnButton to='/' />
           <Suspense fallback={<Container>Загрузка...</Container>}>
             <PartnershipForm />
           </Suspense>
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
         <ApplicationButton tag='button' formId='partnership-form' />
       </>
     ),
+  },
+  {
+    path: '/application/sent',
+    element: <ApplicationSent />,
   },
 ]);
 
