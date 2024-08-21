@@ -75,17 +75,29 @@ export const Header = ({ className }) => {
 
                 <ul className={s.list}>
                   <li className={s.item}>
-                    <Link to='/' className={s.link}>
+                    <Link
+                      onClick={() => scrollToSection('#automation-section')}
+                      to='#automation-section'
+                      className={s.link}
+                    >
                       Потенциал рынка
                     </Link>
                   </li>
                   <li className={s.item}>
-                    <Link to='/' className={s.link}>
+                    <Link
+                      onClick={() => scrollToSection('#reason-section')}
+                      to='#reason-section'
+                      className={s.link}
+                    >
                       Почему BILLZ?
                     </Link>
                   </li>
                   <li className={s.item}>
-                    <Link to='/' className={s.link}>
+                    <Link
+                      onClick={() => scrollToSection('#partnership-section')}
+                      to='#partnership-section'
+                      className={s.link}
+                    >
                       Типы партнерства
                     </Link>
                   </li>
