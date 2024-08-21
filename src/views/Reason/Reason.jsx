@@ -7,7 +7,7 @@ import s from './Reason.module.scss';
 
 export const Reason = () => {
   return (
-    <section className={s.reason}>
+    <section id="reason-section" className={s.reason}>
       <Achievement
         className={s.achievement}
         number='#1'

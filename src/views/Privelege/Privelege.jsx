@@ -1,5 +1,5 @@
 import { Container } from '../../components/Container/Container';
-import { scrollToForm } from '../../helpers/scrollToForm';
+import { scrollToSection } from '../../helpers/scrollToSection';
 import { Button } from '../../ui/Button/Button';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './Privelege.module.scss';
@@ -13,7 +13,7 @@ export const Privelege = () => (
 
       <Button
         to='#partnership-form'
-        onClick={scrollToForm}
+        onClick={() => scrollToSection("#partnership-form")}
         className={s.button}
       >
         Оставить заявку

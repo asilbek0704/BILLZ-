@@ -1,5 +1,5 @@
 import { Container } from '../../components/Container/Container';
-import { scrollToForm } from '../../helpers/scrollToForm';
+import { scrollToSection } from '../../helpers/scrollToSection';
 import { Button } from '../../ui/Button/Button';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './Advantages.module.scss';
@@ -130,7 +130,7 @@ export const Advantages = () => {
         <Button
           className={s.button}
           to='#partnership-form'
-          onClick={scrollToForm}
+          onClick={() => scrollToSection("#partnership-form")}
         >
           Оставить заявку на консультацию
         </Button>

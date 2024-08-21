@@ -1,12 +1,12 @@
 import { Container } from '../../components/Container/Container';
 import { Potential } from '../../components/Potential/Potential';
-import { scrollToForm } from '../../helpers/scrollToForm';
+import { scrollToSection } from '../../helpers/scrollToSection';
 import { Button } from '../../ui/Button/Button';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './Automation.module.scss';
 
 export const Automation = () => (
-  <section className={s.automation}>
+  <section id='automation-section' className={s.automation}>
     <Container className={s.automationContainer}>
       <div className={s.about}>
         <h1 className={s.title}>
@@ -34,7 +34,7 @@ export const Automation = () => (
       <Button
         className={s.button}
         to='#partnership-form'
-        onClick={scrollToForm}
+        onClick={() => scrollToSection("#partnership-form")}
       >
         Оставить заявку на консультацию
       </Button>

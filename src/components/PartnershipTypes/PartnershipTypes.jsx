@@ -1,4 +1,4 @@
-import { scrollToForm } from '../../helpers/scrollToForm';
+import { scrollToSection } from '../../helpers/scrollToSection';
 import { Button } from '../../ui/Button/Button';
 import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './PartnershipTypes.module.scss';
@@ -93,7 +93,7 @@ export const PartnershipTypes = () => (
       <Button
         className={s.button}
         to='#partnership-form'
-        onClick={scrollToForm}
+        onClick={() => scrollToSection("#partnership-form")}
       >
         Оставить заявку
       </Button>
@@ -197,7 +197,7 @@ export const PartnershipTypes = () => (
       <Button
         className={s.button}
         to='#partnership-form'
-        onClick={scrollToForm}
+        onClick={() => scrollToSection("#partnership-form")}
       >
         Оставить заявку
       </Button>

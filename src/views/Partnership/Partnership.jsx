@@ -4,7 +4,7 @@ import { Highlighter } from '../../ui/Highlighter/Highlighter';
 import s from './Partnership.module.scss';
 
 export const Partnership = () => (
-  <section className={s.partnership}>
+  <section id='partnership-section' className={s.partnership}>
     <Container className={s.partnershipContainer}>
       <h1 className={s.title}>
         Типы <Highlighter>партнерства</Highlighter>

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { Button } from '../../ui/Button/Button';
 import { Container } from '../Container/Container';
 import s from './Achievement.module.scss';
-import { scrollToForm } from '../../helpers/scrollToForm';
+import { scrollToSection } from '../../helpers/scrollToSection';
 
 export const Achievement = ({
   number,
@@ -31,7 +31,7 @@ export const Achievement = ({
         <Button
           className={s.button}
           to='#partnership-form'
-          onClick={scrollToForm}
+          onClick={() => scrollToSection("#partnership-form")}
         >
           Оставить заявку на консультацию
         </Button>

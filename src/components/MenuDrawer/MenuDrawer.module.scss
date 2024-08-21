@@ -1,0 +1,49 @@
+.drawer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #000000b8;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+
+    overflow-y: hidden;
+  }
+
+  &.show .drawerContainer {
+    transform: translateY(0);
+  }
+}
+
+.drawerContainer {
+  width: 100%;
+  height: 325px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+  border-radius: 0 0 32px 32px;
+  transition: 0.5s;
+
+  transform: translateY(-100%);
+}
+
+.button {
+  font-weight: 700;
+  background-color: #f1f3f5;
+  color: #71717a;
+  font-size: 16px;
+  padding: 18px;
+  border-radius: 32px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
