@@ -19,9 +19,17 @@ export const MenuDrawer = ({ isOpen, onClick: handleClick }) => {
       onClick={handleClick}
       className={classNames(s.drawer, isOpen ? s.show : null)}
     >
-      <Container className={s.drawerContainer}>
+      <Container
+        onClick={e => {
+          e.stopPropagation();
+        }}
+        className={s.drawerContainer}
+      >
         <Button
-          onClick={() => scrollToSection('#automation-section')}
+          onClick={() => {
+            scrollToSection('#automation-section');
+            handleClick();
+          }}
           to='#automation-section'
           variation='extra'
           className={s.button}
@@ -30,7 +38,10 @@ export const MenuDrawer = ({ isOpen, onClick: handleClick }) => {
         </Button>
 
         <Button
-          onClick={() => scrollToSection('#reason-section')}
+          onClick={() => {
+            scrollToSection('#reason-section');
+            handleClick();
+          }}
           to='#reason-section'
           variation='extra'
           className={s.button}
@@ -39,7 +50,10 @@ export const MenuDrawer = ({ isOpen, onClick: handleClick }) => {
         </Button>
 
         <Button
-          onClick={() => scrollToSection('#partnership-section')}
+          onClick={() => {
+            scrollToSection('#partnership-section');
+            handleClick();
+          }}
           to='#partnership-section'
           variation='extra'
           className={s.button}
