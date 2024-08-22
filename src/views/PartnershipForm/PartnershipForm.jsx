@@ -39,7 +39,7 @@ const PartnershipForm = () => {
     };
 
     console.log(formData);
-    navigate("/application/sent");
+    navigate('/application/sent');
   }
 
   return (
@@ -58,6 +58,7 @@ const PartnershipForm = () => {
             <legend>Ваше имя и фамилия</legend>
 
             <Input
+              type='text'
               required
               name='fullname'
               className='partnership-input'
@@ -69,6 +70,7 @@ const PartnershipForm = () => {
             <legend>Номер телефона</legend>
 
             <Input
+              type='number'
               required
               name='phone'
               className='partnership-input'
@@ -88,6 +90,7 @@ const PartnershipForm = () => {
             <legend>Почему вы хотите стать партнером?</legend>
 
             <Input
+              type='text'
               name='reason'
               className='partnership-input'
               placeholder='Опишите причину почему вы хотите стать партнером'
@@ -121,6 +124,7 @@ const PartnershipForm = () => {
             <legend>Какой у вас опыт в ритейле?</legend>
 
             <Input
+              type='text'
               required
               name='experience'
               className='partnership-input'
@@ -132,6 +136,7 @@ const PartnershipForm = () => {
             <legend>Ваша сумма средств для инвестирования</legend>
 
             <Input
+              type='number'
               required
               name='investmentAmount'
               className='partnership-input'
@@ -151,6 +156,7 @@ const PartnershipForm = () => {
             <legend>Сколько времени вы готовы уделить?</legend>
 
             <Input
+              type='number'
               required
               name='payload'
               className='partnership-input'
@@ -170,6 +176,7 @@ const PartnershipForm = () => {
             <legend>Из какого вы города?</legend>
 
             <Input
+              type='text'
               required
               name='city'
               className='partnership-input'

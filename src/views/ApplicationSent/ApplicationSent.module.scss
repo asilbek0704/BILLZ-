@@ -1,11 +1,13 @@
 .sent {
-  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
 
   @media (max-width: 576px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 90vh;
+    max-height: none;
+    min-height: 100vh;
   }
 }
 
@@ -44,6 +46,8 @@
 
   @media (max-width: 576px) {
     margin-bottom: 0;
+    margin-top: 30vh;
+
   }
 }
 

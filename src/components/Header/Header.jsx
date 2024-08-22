@@ -59,7 +59,9 @@ export const Header = ({ className }) => {
 
   return (
     <>
-      <div className={s.divider}></div>
+      {pathname !== '/application/sent' ? (
+        <div className={s.divider}></div>
+      ) : null}
 
       <HideOnScroll>
         <AppBar>
@@ -118,7 +120,7 @@ export const Header = ({ className }) => {
                     Стать партнером
                   </Button>
 
-                  {pathname != '/application' ? (
+                  {pathname !== '/application' ? (
                     <Menu isOpen={isOpen} onClick={handleClick} />
                   ) : null}
                 </div>
